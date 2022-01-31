@@ -8,10 +8,10 @@
   flex-direction: row;
 }
 .align-center {
-    align-items: center;
+  align-items: center;
 }
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 .m-b-10 {
   margin-bottom: 10px;
@@ -23,13 +23,13 @@
   font-weight: bold;
 }
 .w-55 {
-    width: 55px;
+  width: 55px;
 }
 .w-300 {
   width: 300px;
 }
-.w-200 {
-  width: 200px;
+.min-w-200 {
+  min-width: 200px;
 }
 .w-100 {
   width: 100px;
@@ -41,5 +41,5 @@
   width: 700px;
 }
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }

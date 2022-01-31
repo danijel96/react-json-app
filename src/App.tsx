@@ -42,9 +42,22 @@ function App() {
 		[dataObject, setDataObject]
 	);
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const handleLoadJsonFile = (e: any) => {
+		setDataObject([]);
+		const fileReader = new FileReader();
+		fileReader.readAsText(e.target.files[0]);
+		fileReader.onload = (e) => {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
+			setDataObject(JSON.parse(e.target.result));
+		};
+	};
+
 	return (
 		<div className="app-page">
 			{dataObject.map((item, index) => (
+
 				<ItemContext.Provider value={providerValue} key={item.id}>
 					<Item
 						key={item.id}
@@ -56,6 +69,7 @@ function App() {
 			))}
 
 			<div className="button-wrapper d-flex justify-center">
+				<input type="file" name="fileJson" id="fileJson" onChange={handleLoadJsonFile} />
 				<button type="button" className="m-r-10" onClick={saveFile}>
 					Save JSON file
 				</button>

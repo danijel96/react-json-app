@@ -1,5 +1,5 @@
 .item-wrapper {
-    margin: 30px auto;
+  margin: 30px auto;
 }
 .item-row {
   padding: 30px;
@@ -16,32 +16,43 @@
   margin-right: 15px;
 
   .prop-value {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 50px;
 
-      &.about {
-          min-height: 50px;
-          height: unset;
-      }
+    &.about {
+      min-height: 50px;
+      height: unset;
+      min-width: 500px;
+    }
+    &.address,
+    &.email {
+      min-width: 300px;
+    }
   }
   p {
     margin-bottom: 0;
     margin-top: 0;
-  }
-  input:not(input[type='radio']) {
-    width: 100%;
-    max-width: 350px;
   }
   textarea {
     width: 90%;
     margin-left: 55px;
   }
 }
+.edit-wrapper {
+  input:not(input[type='radio']) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+  }
+  textarea {
+    width: 90%;
+  }
+}
 
 button {
-    &.edit {
-        background-color: #ffd035;
-    }
+  &.edit {
+    background-color: #ffd035;
+  }
 }
